@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Présentation ARMANDO Julien</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="transition/transition.js"></script>
+
+  <script type="text/javascript" src="scripts/quiz.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="transition/transition.css">
+  <link rel="stylesheet" type="text/css" href="styles/presentation.css">
+</head>
+
+<body id="slides" onload="initFrag()">
+  <!-- Page de présentation -->
+  <section>
+    <span class="logo">
+      <img class="iut_logo" src="./images/logoIUT.png">
+      <img class="uca_logo" src="./images/uca_logo.png">
+    </span>
+    <div class="center_page">
+      <p>Projets Individualisés</p>
+      <p>Session 2019 - 2020</p>
+      <p>Projet création/développement d'un outil de création de présentations en javascript/HTML5</p>
+      <p>Présenté par ARMANDO Julien</p>
+    </div>
+  </section>
+  <!-- Sommaire -->
+  <section fragments='[slides]{--shift++} 1s'>
+    <p class="title">Sommaire</p>
+    <ol class='hidden' fragments='{hidden} 1s'>
+      <li>Présentation du projet</li>
+      <li>Le sujet choisi</li>
+      <li>Comment l'utiliser ?</li>
+      <li>Explications techniques</li>
+      <li>Améliorations possibles</li>
+      <li>Conclusion</li>
+    </ol>
+  </section>
+  <!-- Présentation du projet -->
+  <section fragments='[slides]{--shift++} 1s'>
+    <p class="title"> Présentation du projet </p>
+    <p class="hidden" fragments="{hidden} 1s">Ajout d'une fonctionnalité au script transition.js</p>
+    <ul class="hidden" fragments="{hidden}">
+      <li>Extension des options de transitions et de leur description</li>
+      <li>Enregistrement audio</li>
+      <li fragments='{highlight}'>Interaction type Quizz en live</li>
+      <li>Représentation de liens (flèches et autres) entre les éléments</li>
+      <li>Formules Mathématiques dynatmiques</li>
+    </ul>
+    <div class="center">
+      <p class='hidden' fragments='{hidden} 1s'>Transition.js, c'est quoi ?</p>
+      <p class='hidden' fragments='{hidden} 1s'>Script JavaScript</p>
+      <p class='hidden' fragments='{hidden} 1s'>Développé par Mr Olivier Pantz</p>
+      <p class='hidden' fragments='{hidden} 1s'>Permet de faire des présentations HTML style powerpoint</p>
+    </div>
+  </section>
+  <!-- Sujet choisi -->
+  <section fragments='[slides]{--shift++} 1s'>
+    <p class="title"> Sujet choisi </p>
+    <div>
+      <p class='hidden' fragments='{hidden} 1s'>Développement d'un système de quizz basé sur le script transition.js</p>
+      <p class='hidden' fragments='{hidden} 1s'>Quiz.js</p>
+      <p class='hidden' fragments='{hidden} 1s'>Des Quizzs simples</p>
+      <p class='hidden' fragments='{hidden} 1s'>Des QCM (Questions à Choix Multiple)</p>
+      <p class='hidden' fragments='{hidden} 1s'>Votes sont sauvegardés où non dans une base de données</p>
+      <p class="hidden" fragments="{hidden} 1s">Un mode présentateur qui permet au professeur de voir le compteur de vote en temps réel</p>
+    </div>
+  </section>
+  <!-- Comment utiliser quiz.js -->
+  <section class="quiz" fragments='[slides]{--shift++} 1s'>
+    <p class="title"> Comment l'utiliser ? </p>
+    <p class="subtitle hidden" fragments="{hidden} 1s">Quizz simples</p>
+    <p class="question center hidden" fragments="{hidden} 1s"> Sur quel script est basé quiz.js ? </p>
+    <div id="answers" class="hidden center" fragments="{hidden} +0 [submit]{hidden}">
+      <p class='answer false'>PowerPoint.js</p>
+      <p class='answer true'>Transition.js</p>
+      <p class='answer false'>Ce script n'est basé sur aucun autre script</p>
+    </div>
+    <div id="submit" class="hidden">
+      <p class="submit">Valider mon choix</p>
+    </div>
+    <div class="code">
+      <pre>
+        <code class="hidden html" fragments="{hidden} 1s">
+          &lt;section class="quiz"&gt;
+          &lt;p class="question"&gt; Sur quel script est basé quiz.js ? &lt;/p&gt;
+          &lt;div&gt;
+          &lt;p class='answer false'&gt;PowerPoint.js&lt;/p&gt;
+          &lt;p class='answer true'&gt;Transition.js&lt;/p&gt;
+          &lt;p class='answer false'&gt;Ce script n'est basé sur aucun autre script&lt;/p&gt;
+          &lt;p class="submit"&gt;Valider mon choix&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;/section&gt;
+        </code>
+      </pre>
+    </div>
+  </section>
+  <section class="quiz mcq" fragments="[slides]{--shift++} 1s">
+    <p class="subtitle">Les QCM</p>
+    <p class="question center hidden" fragments="{hidden} 1s"> Combien font 2 + 2 ?</p>
+    <div id="answers2" class="hidden center" fragments="{hidden} +0 [submit2]{hidden}">
+      <p class='answer false'>6</p>
+      <p class='answer true'>4</p>
+      <p class='answer true'>6 - 2</p>
+    </div>
+    <div id="submit2" class="hidden">
+      <p class="submit">Valider mon choix</p>
+    </div>
+    <div class="code">
+      <pre>
+        <code class="hidden html" fragments="{hidden} 1s">
+          &lt;section class="quiz mcq"&gt;
+          &lt;p class="question"&gt; Combien font 2 + 2 ? &lt;/p&gt;
+          &lt;div&gt;
+          &lt;p class='answer false'&gt;6&lt;/p&gt;
+          &lt;p class='answer true'&gt;4&lt;/p&gt;
+          &lt;p class='answer true'&gt;6 - 2&lt;/p&gt;
+          &lt;p class="submit"&gt;Valider mon choix&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;/section&gt;
+        </code>
+      </pre>
+    </div>
+    <div class="center hidden" fragments="{hidden} 1s">
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+        <path fill="red" d="M12,2L1,21H23M12,6L19.53,19H4.47M11,10V14H13V10M11,16V18H13V16" />
+      </svg> Attention bien sûr à ne pas oublier ces lignes dans le fichier HTML :
+      <div class="warning_include">
+        <code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"&gt;&lt;/script&gt;</code>
+        <code>&lt;script type="text/javascript" src="transition/transition.js"&gt;&lt;/script&gt;</code>
+        <code>&lt;script type="text/javascript" src="scripts/quiz.js"&gt;&lt;/script&gt;</code>
+      </div>
+    </div>
+  </section>
+  <section fragments="[slides]{--shift++} 1s">
+    <p class="subtitle">Le mode "rated"</p>
+    <p class="hidden" fragments="{hidden} 1s">Ce mode permet d'indiquer au script que les votes seront enregistrés</p>
+    <p class="hidden" fragments="{hidden} 1s">Il faudra pour cela avant tout importer tous les fichiers disponibles à cette adresse : <a href="https://github.com/Hanasagi/transitionJS/tree/Julien/stats" target="_blank">https://github.com/Hanasagi/transitionJS/tree/Julien/stats</a></p>
+    <p class="hidden" fragments="{hidden} 1s">Une fois ça de fait, il faudra ajouter la classe "rated" au body comme ceci : <code class="hidden" fragments="{hidden} 1s">&lt;body class="rated"&gt;</code></p>
+    <p class="hidden" fragments="{hidden} 1s">Il ne faudra pas non plus oublier de changer le fichier config.php et de rajouter ces lignes dans votre fichier HTML
+      <div class="warning_include hidden" fragments="{hidden} 1s">
+        <code>  &lt;script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"&gt;&lt;/script&gt;</code>
+        <code>&lt;script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"&gt;&lt;/script&gt;</code>
+      </div></p>
+    </section>
+    <!-- Explications techniques -->
+    <section fragments="[slides]{--shift++} 1s">
+      <p class="title"> Explications techniques </p>
+      <p class="subtitle hidden" fragments="{hidden} 1s">Le mode présentateur </p>
+      <p class="hidden" fragments="{hidden} 1s">Ce mode permettra au présentateur de remettre à 0 les votes ainsi que de voir les résultats des votes</p>
+      <p class="hidden" fragments="{hidden} 1s">On y accède en entrant ?presenter_mode=true dans l'URL</p>
+      <p class="hidden" fragments="{hidden} 1s"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+        <path fill="red" d="M12,2L1,21H23M12,6L19.53,19H4.47M11,10V14H13V10M11,16V18H13V16" />
+      </svg> Bien sûr, ce mode est disponible uniquement si le mode "rated" est activé </p>
+      <p class="subtitle hidden" fragments="{hidden} 1s">Comment ça marche ?</p>
+      <p class="hidden" fragments="{hidden} 1s">Le script teste l'URL pour voir si ?presenter_mode=true y est renseigné</p>
+      <p class="hidden" fragments="{hidden} 1s">S'il y est alors il supprimera tous les boutons "submit" et les remplacera par un bouton "Voir les résultats" et un bouton "Recharger les votes"</p>
+
+      <div class="hidden flex" fragments="{hidden} 1s"><img src="./images/presenterMode.png" />
+        <div>
+          <p class="subtitle hidden" fragments="{hidden} 1s">Désavantage de cette technique</p><br>
+          <p class="hidden" fragments="{hidden} 1s"> - Peu sécurisé</p>
+        </div>
+      </div>
+
+    </section>
+    <section fragments="[slides]{--shift++} 1s">
+      <p class="subtitle hidden" fragments="{hidden} 1s">La sauvegarde des votes en PHP</p>
+      <p class="hidden" fragments="{hidden} 1s">La table quiz dans la base de données se présente comme ceci : </p>
+      <table class="hidden" fragments="{hidden} 1s">
+        <tbody>
+          <tr>
+            <td>id_quiz</td>
+            <td>question</td>
+            <td>alreadyVoted</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="hidden" fragments="{hidden} 1s">La table answers se présente comme ceci : </p>
+      <table class="hidden" fragments="{hidden} 1s">
+        <tbody>
+          <tr>
+            <td>id_quiz</td>
+            <td>answer_text</td>
+            <td>count</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="hidden" fragments="{hidden} 1s"><img src="./images/arborescence.png" /></div>
+      <p class="hidden" fragments="{hidden} 1s">La mise à jour des votes se fait dans le fichier update_answers.php</p>
+    </section>
+    <section fragments="[slides]{--shift++} 1s">
+      <p class="subtitle hidden" fragments="{hidden} 1s">Problème rencontré lors du développement</p>
+      <p class="hidden" fragments="{hidden} 1s"> Lorsque que l'on valide une ou plusieurs réponse(s), elles sont stockées dans une variable de session</p>
+      <p class="hidden" fragments="{hidden} 1s"> Avec ce système, lorsque que l'on remettait les votes à 0, la variable de session contenait encore les anciens votes</p>
+      <p class="hidden" fragments="{hidden} 1s"> Donc, des compteur de vote < 0 apparaissaient</p>
+      <p class="subtitle hidden" fragments="{hidden} 1s">Comment y remédier ?</p>
+      <div class="flex">
+        <img class="big hidden" fragments="{hidden} 1s" src="images/updateAnswers.png">
+      </div>
+    </section>
+    <!-- Améliorations possibles -->
+    <section fragments="[slides]{--shift++} 1s">
+      <p class="title">Améliorations possibles</p>
+      <p class="subtitle hidden" fragments="{hidden} 1s">Un mode présentateur plus sécurisé</p>
+      <p class="hidden" fragments="{hidden} 1s"> Un mot de passe unique </p>
+      <p class="subtitle hidden" fragments='{hidden} 1s'> Un mode permettant la remise à 0 complète de la base de données </p>
+      <p class="subtitle hidden" fragments="{hidden} 1s"> Optimiser le code </p>
+    </section>
+    <!-- Conclusion -->
+    <section fragments="[slides]{--shift++} 1s">
+      <div class="conclusion">
+        <p> Conclusion </p>
+      </div>
+    </section>
+
+  </body>
+  </html>

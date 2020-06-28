@@ -1,0 +1,185 @@
+body {
+  background: #2C2F33 ;
+  color: #FFFFFF ;
+  font-family: "Carlito" ;
+}
+
+p {
+  font-size: 20px ;
+  margin-left: 15px ;
+}
+
+img,
+.logo {
+  display: flex ;
+  justify-content: space-between ;
+  padding: 15px ;
+}
+
+.uca_logo,
+.iut_logo {
+  max-height: 100px ;
+}
+
+img {
+  max-height: 150px ;
+}
+
+
+.center_page {
+  display: flex ;
+  justify-content: center ;
+  align-items: center ;
+  height: calc(100% - 330px) ;
+  width: 100vw ;
+  flex-direction: column ;
+}
+
+.center_page > p {
+  font-size: 25px ;
+}
+
+.title {
+  margin: 10px ;
+  font-size: 50px ;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: bold ;
+  margin: 10px ;
+  font-size: 20px ;
+}
+
+.code {
+  display: flex ;
+  justify-content: center;
+  padding: 10px ;
+}
+
+.conclusion {
+  width: 100% ;
+  height: 100% ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.conclusion > p {
+  font-size: 100px ;
+}
+
+.hidden {
+  opacity: 0 ;
+}
+
+#answers,
+#answers2 {
+  display: flex ;
+  justify-content: center ;
+}
+
+.highlight {
+  color: #CC1545 ;
+}
+
+.center {
+  text-align: center;
+}
+
+.answer {
+  width: auto;
+  height: auto ;
+	border:none;
+	padding:6px 0 6px 0;
+	border-radius:8px;
+	background:#1a57c6;
+	font:bold 13px;
+  cursor: pointer ;
+  color: #FFFFFF ;
+}
+#submit,
+#submit2 {
+  text-align: center;
+}
+
+.submit {
+	padding: 5px 15px;
+	margin: 3px 4px;
+	display: inline-block;
+	color: #ffffff;
+	font-size: 26px;
+	cursor: pointer;
+	background: #4095ff;
+	background: linear-gradient(top, #4095ff 0%, #277ce6 100%);
+	background: -moz-linear-gradient(top, #4095ff 0%, #277ce6 100%);
+	background: -webkit-linear-gradient(top, #4095ff 0%, #277ce6 100%);
+	background: -o-linear-gradient(top, #4095ff 0%, #277ce6 100%);
+	border: 1px solid #338bf6;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	box-shadow:0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+	-moz-box-shadow:0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+	-webkit-box-shadow:0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+	-o-box-shadow:0px 0px 2px 1px rgba(0, 0, 0, 0.25), inset 1px 1px 0px 0px rgba(255, 255, 255, 0.25);
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.50);
+}
+.submit:hover {
+	background: linear-gradient(top, #5aafff 0%, #4095ff 100%);
+	background: -moz-linear-gradient(top, #5aafff 0%, #4095ff 100%);
+	background: -webkit-linear-gradient(top, #5aafff 0%, #4095ff 100%);
+	background: -o-linear-gradient(top, #5aafff 0%, #4095ff 100%);
+}
+
+ol {
+  text-align: center ;
+  list-style-position: inside ;
+}
+
+li {
+  font-size: 20px ;
+  margin: 5px ;
+}
+
+.selected {
+  border: solid 2px red ;
+}
+
+.correct {
+  text-align: center;
+  color: green ;
+}
+
+.incorrect {
+  text-align: center;
+  color: red ;
+}
+
+.warning_include {
+  display:flex ;
+  justify-content: center;
+  flex-direction: column;
+}
+
+table {
+  padding: 15px ;
+}
+
+td {
+  border: solid 1px #FFFFFF ;
+}
+
+code {
+  font-size: 15px ;
+  margin-left: 15px ;
+}
+
+.flex {
+  display: flex ;
+}
+
+.big {
+  max-height: 300px ;
+}

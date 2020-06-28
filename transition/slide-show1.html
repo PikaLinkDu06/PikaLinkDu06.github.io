@@ -1,0 +1,160 @@
+<html>
+	<head>
+		<title>Transition.js</title>
+		<link rel="stylesheet" type="text/css" href="transition.css">
+		<link rel="stylesheet" type="text/css" href="sarah.css">	<!-- template used for the display -->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+				tex2jax: {
+					inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+					processEscapes: true
+	   			}
+  			});
+		</script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+	<style>
+	</style>
+	</head>
+	<body id="body">
+		<div id="footnote" class="removed tiny">Contact :  <a href="mailto:pantz@unice.fr">Olivier Pantz</a></div>
+		<div id="logo" class="removed">No Logo<br/>yet</div>
+		<div id="slides">
+			<section>
+				<div class="center middle Huge">
+					Transition.js
+					<div class="normal">for HTML5 Presentations</div>
+					<div class="small blink">Press spacebar</div>
+				</div>
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+				<div class="center middle">
+					<h2>What for ?</h2>
+					<div class="small">To create beautiful presentations <br/>using HTML &amp; CSS</div>
+				</div>
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+				<div class="center middle big">
+					Smooth transitions...
+				</div>
+			</section>
+			<section fragments="[slides]{--shift++}">
+				<div class="center middle big">
+					Or not
+				</div>
+			</section>
+			<section fragments="[slides]{--shift++}">
+				<div class="center middle full" id="toBlur">
+					<h2>Fragments</h2>
+					<div class="hidden" fragments="{hidden} [this]{big}1s +1{small}2s">This was hidden</div>
+					<div class="hidden big" fragments="{hidden} +1{small}2s">More is behind</div>
+					<div class="hidden" fragments="{hidden}">Multi fragments at once</div>
+				</div>
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+				<div class="center middle full">
+					You can create your own effects.
+					<div class="bottom" fragments="{bottom}1s">
+						There is no limit...
+					</div>
+				</div>
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+				<div class="center middle full">
+					<h2>Navigate with keys</h2>
+					<div>
+						<div>Back</div><div class="italic">Up/left arrow</div><br/>
+						<div>Forward</div> <div class="italic">Down/right arrow, return, spacebar</div>
+					</div>
+				</div>
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+				<div class="center middle full">
+					<h2>Zoom out and Jump</h2>
+					<span fragments="+0 {Huge} 2s 2s">Press <span class="boxed">Esc</span> key</span>
+				</div>
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+				<div class="center middle full">
+					<h2>Footnote and Logo</h2>
+					<div class="hidden" fragments="{hidden} +0[footnote]{removed}">Add footnote</div>
+					<div class="hidden" fragments="{hidden} +0[logo]{removed}">Your Logo</div>
+				</div>
+			</section>
+			<section fragments="[slides]{--shift++} 1s" id="look">
+				<div class="center middle full">
+					<h2>Apparence</h2>
+					<div class="hidden" fragments="{hidden} +0[look]{newlook}">Custom your look</div>
+				</div>
+			</section>
+			<section fragments="[slides]{--shift++} 1s" id="display">
+				<div class="center middle full">
+					<h2>Display</h2>
+					<div>Custom the display</div>
+					<div  class="hidden" fragments="{hidden} +0[display]{newdisplay}">to feet your needs</div>
+				</div>
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+				<div class="center middle full">
+					Write Equations thank's to MathJax
+					$$
+					\int_0^1 x\,dx=\cssId{frac}{\frac 1 2}
+					$$
+					<div class="hidden" fragments="{hidden} +0[frac]{pink} +0[demo]{removed}">Apply fragments to equations</div>
+					<div>
+					$\displaystyle \int_0^1x\,dx=$
+					<span id="demo" class="removed">$\displaystyle \left[ \frac{x^2} 2 \right]_0^1=$</span>
+					$\displaystyle\frac 1 2$
+					</div>
+				</div>
+				<style>
+					.pink {
+						color:hotpink;
+					}
+				</style>
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+			<div class="center middle">
+				<h2>Include graphs</h2>
+				<svg style="width:50vw; height:50vh;" id="cos" xmlns:xlink="http://www.w3.org/1999/xlink" class="hold" fragments="{go}"></svg>
+			</div>
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+				<div class="center middle">
+				<h2>Embed iframes</h2>
+				<iframe width="420" height="315" src="https://www.youtube.com/embed/lP9PaDs2xgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="tiny">Click outside the video frame to get back to the slideshow</div>
+				</div>
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+				<div class="center middle">
+					<h2>Thanks !</h2>
+					<div class="small hidden" fragments="+0{hidden} 4s 2s">
+						Do not hesitate to use, share, propose new templates or improvements...<br/>
+						<a href="https://math.unice.fr/~pantz/slides/transition.tgz">Download</a>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+	<!--
+	<svg>
+	<defs>
+		<marker id="graphArrow" viewbox="-9 -3 9 6" orient="auto" markerUnits="strokeWidth" markerHeight="12"
+						markerWidth="18">
+			<path d="M0,0 L-9,3 L-9,-3 z" fill="white" />
+		</marker>
+	</defs>
+	</svg>		-->
+	<script type="text/javascript" src="transition.js"></script>
+	<script type="text/javascript" src="graph.js"></script>
+	<script>
+		var Xmin=-2*Math.PI; var Xmax=2*Math.PI; var Ymin=-1.5; var Ymax=1.5;
+		var N=160;
+		var target=document.getElementById("cos");
+		var cos=new graph(target,[Xmin,Ymin,Xmax,Ymax]);
+		var width=parseFloat(getComputedStyle(target).getPropertyValue("width"));
+		cos.draw_axes(width*0.002);
+		cos.draw(function f(x){return Math.cos(x);},[Xmin,Xmax],N,"stroke-width:"+(width*0.004)+"; stroke:white;");
+	</script>
+	<script>MathJax.Hub.Queue(function(){initFrag()});</script>
+</html>

@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="transition.css">
+	<style>
+	</style>
+	</head>
+	<body id="body">
+		<div id="slides">
+			<section>
+					My FIRST SLIDE
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+					my second slide
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+					... That's all folks.
+			</section>
+		</div>
+	</body>
+	<script type="text/javascript" src="transition.js"></script>
+	<script>document.addEventListener("DOMContentLoaded",function(){initFrag()})</script>
+</html>

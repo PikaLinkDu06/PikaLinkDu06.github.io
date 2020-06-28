@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<meta charset="UTF-8"></head>
+		<link rel="stylesheet" type="text/css" href="transition.css">
+		<link rel="stylesheet" type="text/css" href="sarah.css">
+	<style>
+	</style>
+	</head>
+	<body id="body">
+		<img style="background-color:white;padding:1em;" id="logo" src="http://math.unice.fr/~pantz/css/Images/Logo-UCA.png"/>
+		<div id="footnote">Olivier Pantz, LJAD, Université Côte d'Azur.</div>
+		<div id="slides">
+			<section>
+					My FIRST SLIDE
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+					my second slide
+			</section>
+			<section fragments="[slides]{--shift++} 1s">
+					... That's all folks.
+			</section>
+		</div>
+	</body>
+	<script type="text/javascript" src="transition.js"></script>
+	<script>document.addEventListener("DOMContentLoaded",function(){initFrag()})</script>
+</html>

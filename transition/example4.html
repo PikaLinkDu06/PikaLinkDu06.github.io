@@ -1,0 +1,28 @@
+<html>
+	<head><meta charset="UTF-8"></head>
+	<style>
+		.hidden {opacity:0;}
+		.small{font-size:small;}
+	</style>
+	<body>
+		<div id="first">
+			Tapez sur l'une des touches suivantes: 
+			<ul>
+				<li fragments="+1{small}">la barre d'espace</li>
+				<li class="small" fragments="{small} +1{small}">fléche du bas</li>
+				<li class="small" fragments="{small} +1{small}">flèche de droite</li>
+				<li class="small" fragments="{small} +1{small}">retour du chariot.</li>
+			</ul>
+		</div>
+		<div class="hidden" fragments="[this] {hidden} +0[first]{small}">
+			BRAVO !<br/>
+			Vous pouvez revenir en arrière avec les touches 
+			<ul>
+				<li>fléche du haut</li>
+				<li>flèche de droite.</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="transition.js"></script>
+	<script>document.addEventListener("DOMContentLoaded",function(){initFrag()})</script>
+</html>
