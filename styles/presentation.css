@@ -183,3 +183,7 @@ code {
 .big {
   max-height: 300px ;
 }
+
+.very_big {
+  max-height: 400px ;
+}
